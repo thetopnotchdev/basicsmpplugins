@@ -12,11 +12,10 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-          cache: maven
       - name: Build
-        run: mvn -B package
+        run: mvn -B package -f BasicSMP-plugin/pom.xml
       - name: Upload plugin jar
         uses: actions/upload-artifact@v4
         with:
           name: BasicSMP
-          path: target/BasicSMP-*.jar
+          path: BasicSMP-plugin/target/BasicSMP-*.jar
