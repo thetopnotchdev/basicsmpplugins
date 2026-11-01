@@ -1,0 +1,36 @@
+# Basic SMP configuration
+tpa:
+  timeout-seconds: 60
+
+homes:
+  max-homes: 3
+
+enchant-rotation:
+  enabled: true
+  interval-seconds: 600          # 10 minutes
+  warnings: [60, 30, 10, 5, 4, 3, 2, 1]
+  max-level-cap: 5               # only used when the held item already has the enchant
+  # Enchants that work from the main hand on ANY item.
+  # density + wind_burst are emulated for non-mace items (see EnchantEffects).
+  pool:
+    - sharpness
+    - smite
+    - bane_of_arthropods
+    - fire_aspect
+    - knockback
+    - looting
+    - density
+    - breach
+    - wind_burst
+    - fortune
+    - silk_touch
+    - unbreaking
+    - mending
+
+strength:
+  min: -1
+  max: 2
+
+extras:
+  sleeping-percentage: 50        # vanilla gamerule playersSleepingPercentage
+  death-coordinates: true        # tell players where they died

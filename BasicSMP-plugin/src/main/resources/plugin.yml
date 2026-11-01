@@ -1,0 +1,44 @@
+name: BasicSMP
+version: '${project.version}'
+main: com.jitnation.basicsmp.BasicSMP
+api-version: '1.21'
+description: Basic SMP - vanilla SMP with tpa/homes, global enchant rotation and strength cores.
+commands:
+  tpa:
+    description: Send a teleport request (/tpa <player>, /tpa accept|deny [player])
+    usage: /tpa <player|accept|deny>
+  tpahere:
+    description: Ask a player to teleport to you
+    usage: /tpahere <player>
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept [player]
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny [player]
+    aliases: [tpadeny]
+  sethome:
+    description: Set a home
+    usage: /sethome [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+  homes:
+    description: List your homes
+    usage: /homes
+  strength:
+    description: Show your strength level (admin - give core)
+    usage: /strength [give <player>]
+  enchantrotation:
+    description: Enchant rotation admin (status|now|reload)
+    usage: /enchantrotation <status|now|reload>
+    aliases: [rotation]
+    permission: basicsmp.admin
+permissions:
+  basicsmp.admin:
+    default: op
+  basicsmp.homes.unlimited:
+    default: op
